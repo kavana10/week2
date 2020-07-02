@@ -51,28 +51,41 @@
     </style> 
           
     <script> 
-       $(document).ready(function () {
-            $("#hide").click(function () {
-                $("textarea").hide();
-            });
-             });
-         
+        $(function() { 
+            function toggleEffect() { 
+                $( "#container" ).toggle('pulsate', 1000); 
+            }; 
+              
+            $( "#toggleBtnId" ).click(function() { 
+                toggleEffect(); 
+                return false; 
+            }); 
+        }); 
     </script> 
 </head> 
       
 <body> 
-    <h1 style="color:green"> 
-       HIDE USAGE 
+    <h1 style="color:Red"> 
+        Toggle
     </h1> 
-
-<input type="radio" id="hide" name="hide" value="hide">
-<label for="hide">hide</label><br>
-<label for="area"></label>
-
-<textarea id="area" name="area" rows="4" cols="50">
-jQuery hide() Method
-The hide() method hides the selected elements. Tip: This is similar to the CSS property display:none. Note: Hidden elements will not be displayed at all (no longer affects the layout of the page). Tip: To show hidden elements, look at the show() method..
-</textarea>
+      
+  
+      
+    <div class="height"></div><br/> 
+      
+    <div class = "mainDiv"> 
+        <div id = "container" >
+              <p  style="color:blue"> 
+                We are learning jQuery UI framework's 
+                toggle() method! Please click button 
+                to show and hide the above div. 
+            </p> 
+        </div> 
+    </div> 
+      
+    <input type = "button" id = "toggleBtnId"
+           
+            value = "Click this to see magic" /> 
 </body> 
   
 </html> 
